@@ -12,3 +12,4 @@ e[VSCode]
 end
 ```
 VSCodeでPreviewしながら、CSSを検討することにする。
+VSCodeで変更したものが、ちゃんとGitHubに反映されている。
