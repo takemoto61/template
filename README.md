@@ -10,6 +10,5 @@ subgraph edito
 a
 e[VSCode]
 end
-
-
 ```
+VSCodeでPreviewしながら、CSSを検討することにする。
