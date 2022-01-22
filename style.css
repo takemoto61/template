@@ -520,6 +520,7 @@ color:#fff;
 #header{
 overflow:hidden;
 padding:5px 0 15px;
+position:fixed;
 }
 
 * html #header{height:1%;}
