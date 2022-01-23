@@ -1,5 +1,4 @@
 @charset "utf-8";
-/* updated on January 23, 2022 */
 
 /*#region  Reset default browser CSS. -------------------------------*/
 /* Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html */
@@ -515,16 +514,18 @@ h1{
   overflow:hidden;
   padding:5px 0 15px;
 }
-/* header 固定機能 (with javascript/FixedAnime()) */
-#header.fixed {
+* html #header{height:1%;}
+/*#endregion*/
+
+/*region 固定機能 (with javascript/FixedAnime()) */
+.fixed {
   width:100%;/*横幅指定*/
   position: fixed;/*fixedを設定して固定*/
   z-index: 999;/*最前面へ*/
   top:0;/*位置指定*/
   left:0;/*位置指定*/
 }
-* html #header{height:1%;}
-/*#endregion*/
+/*endregion*/
 
 /*#region .log .info .tel (ロゴ) */
 #header .logo{
