@@ -1,8 +1,10 @@
 @charset "utf-8";
 
-/*#region  Reset default browser CSS. -------------------------------*/
-/* Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {border: 0;font-family: inherit;font-size: 100%;font-style: inherit;font-weight: inherit;margin: 0;outline: 0;padding: 0;vertical-align: baseline;}
+
+/* Reset default browser CSS.
+	Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table.table, caption, tbody, tfoot, thead, tr, th, td {border: 0;font-family: inherit;font-size: 100%;font-style: inherit;font-weight: inherit;margin: 0;outline: 0;padding: 0;vertical-align: baseline;}
 :focus {outline: 0;}
 
 ol, ul {list-style: none;}
@@ -13,876 +15,869 @@ blockquote, q {quotes: "" "";}
 a img{border: 0;}
 figure{margin:0}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
-/*#endregion*/
 
-/*#region stack_edit.css normalize ---------------------------------- */
-/*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
-html {
-  line-height: 1.15;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%
-}
-
+/* <body> 
+----------------------------------------------------*/
 body {
-  margin: 0
+	color:#333;
+	font-size:small;
+	font-family:verdana,"ヒラギノ丸ゴ ProN W4","Hiragino Maru Gothic ProN","メイリオ","Meiryo","ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
+	line-height:1.5;
+	-webkit-text-size-adjust: none;
 }
 
-article, aside, footer, header, nav, section {
-  display: block
-}
+/* <a> リンク設定 
+----------------------------------------------------*/
+a{color:#00a0e9;text-decoration:none;}
+a:hover{color:#006699;}
+a:active, a:focus {outline:0;}
 
-h1 {
-  font-size: 2em;
-  margin: .67em 0
-}
-
-figcaption, figure {
-  display: block
-}
-
-figure {
-  margin: 1em 40px
-}
-
-hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible
-}
-
-main {
-  display: block
-}
-
-pre {
-  font-family: monospace, monospace;
-  font-size: 1em
-}
-
-a {
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects
-}
-
-abbr[title] {
-  border-bottom: none;
-  text-decoration: underline;
-  text-decoration: underline dotted
-}
-
-b, strong {
-  font-weight: inherit;
-  font-weight: bolder
-}
-
-code, kbd, samp {
-  font-family: monospace, monospace;
-  font-size: 1em
-}
-
-dfn {
-  font-style: italic
-}
-
-mark {
-  background-color: #ff0;
-  color: #000
-}
-
-small {
-  font-size: 80%
-}
-
-sub, sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline
-}
-
-sub {
-  bottom: -.25em
-}
-
-sup {
-  top: -.5em
-}
-
-audio, video {
-  display: inline-block
-}
-
-audio:not([controls]) {
-  display: none;
-  height: 0
-}
-
-img {
-  border-style: none
-}
-
-svg:not(:root) {
-  overflow: hidden
-}
-
-button, input, optgroup, select, textarea {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0
-}
-
-button {
-  overflow: visible
-}
-
-button, select {
-  text-transform: none
-}
-
-[type=reset], [type=submit], button, html [type=button] {
-  -webkit-appearance: button
-}
-
-[type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner, button::-moz-focus-inner {
-  border-style: none;
-  padding: 0
-}
-
-[type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring, button:-moz-focusring {
-  outline: 1px dotted ButtonText
-}
-
-input {
-  overflow: visible
-}
-
-[type=checkbox], [type=radio] {
-  box-sizing: border-box;
-  padding: 0
-}
-
-[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
-  height: auto
-}
-
-[type=search] {
-  -webkit-appearance: textfield;
-  outline-offset: -2px
-}
-
-[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
-  -webkit-appearance: none
-}
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit
-}
-
-fieldset {
-  padding: .35em .75em .625em
-}
-
-legend {
-  box-sizing: border-box;
-  display: table;
-  max-width: 100%;
-  padding: 0;
-  color: inherit;
-  white-space: normal
-}
-
-progress {
-  display: inline-block;
-  vertical-align: baseline
-}
-
-textarea {
-  overflow: auto
-}
-
-details {
-  display: block
-}
-
-summary {
-  display: list-item
-}
-
-menu {
-  display: block
-}
-
-canvas {
-  display: inline-block
-}
-
-[hidden], template {
-  display: none
-}
-
-body, html {
-  color: rgba(0, 0, 0, .75);
-  font-size: 16px;
-  font-family: Lato, Helvetica Neue, Helvetica, sans-serif;
-  font-variant-ligatures: common-ligatures;
-  line-height: 1.67;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale
-}
-
-.app--dark .layout__panel--editor, .app--dark .layout__panel--preview {
-  color: hsla(0, 0%, 100%, .75)
-}
-
-blockquote, dl, ol, p, pre, ul {
-  margin: 1.2em 0
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 1.8em 0;
-  line-height: 1.33
-}
-
-h1:after, h2:after {
-  content: "";
-  display: block;
-  position: relative;
-  top: .33em;
-  border-bottom: 1px solid hsla(0, 0%, 50%, .33)
-}
-
-ol ol, ol ul, ul ol, ul ul {
-  margin: 0
-}
-
-dt {
-  font-weight: 700
-}
-
-a {
-  color: #0c93e4;
-  text-decoration: underline;
-  text-decoration-skip: ink
-}
-
-a:focus, a:hover {
-  text-decoration: none
-}
-
-code, pre, samp {
-  font-family: Roboto Mono, Lucida Sans Typewriter, Lucida Console, monaco, Courrier, monospace;
-  font-size: .85em
-}
-
-code *, pre *, samp * {
-  font-size: inherit
-}
-
-blockquote {
-  color: rgba(0, 0, 0, .5);
-  padding-left: 1.5em;
-  border-left: 5px solid rgba(0, 0, 0, .1)
-}
-
-.app--dark .layout__panel--editor blockquote, .app--dark .layout__panel--preview blockquote {
-  color: hsla(0, 0%, 100%, .4);
-  border-left-color: hsla(0, 0%, 100%, .1)
-}
-
-code {
-  background-color: rgba(0, 0, 0, .05);
-  border-radius: 3px;
-  padding: 2px 4px
-}
-
-hr {
-  border: 0;
-  border-top: 1px solid hsla(0, 0%, 50%, .33);
-  margin: 2em 0
-}
-
-pre>code {
-  background-color: rgba(0, 0, 0, .05);
-  display: block;
-  padding: .5em;
-  -webkit-text-size-adjust: none;
-  overflow-x: auto;
-  white-space: pre
-}
-
-.toc ul {
-  list-style-type: none;
-  padding-left: 20px
-}
-
+/* <table> テーブル
+----------------------------------------------------*/
 table {
-  background-color: transparent;
   border-collapse: collapse;
-  border-spacing: 0
+	margin:5px auto 15px auto;
+}
+table td{
+	border-collapse:collapse;
+	background-color:#F9F9F9;
+	text-align:left;
+	padding:8px;
+	border:1px solid #D6D6D6;
+	line-height:20px;
+}
+table th{
+	background-color:#F5F5F5;
+	text-align:right;
+	padding:8px;
+	white-space:nowrap;
+	color: #151515;
+	border-top:1px solid #D4D4D4;
+	border-right:4px solid #D4D4D4;
+	border-bottom:1px solid #D4D4D4;
+	border-left:1px solid #D4D4D4;
+	font-size:13px;
+	font-weight:normal;
+	letter-spacing:1px;
+	background-repeat:repeat-x;
+	background-position:top;
 }
 
-td, th {
-  border-right: 1px solid #dcdcdc;
-  padding: 8px 12px
+/* <address>
+----------------------------------------------------*/
+address{
+	clear:both;
+	padding:5px;
+	text-align:center;
+	font-style:normal;
+	font-size:10px;
+	color:#333;
+	background:#dbdbdb;
 }
 
-td:last-child, th:last-child {
-  border-right: 0
-}
-
-td {
-  border-top: 1px solid #dcdcdc
-}
-
-mark {
-  background-color: #f8f840
-}
-
-kbd {
-  font-family: Lato, Helvetica Neue, Helvetica, sans-serif;
-  background-color: #fff;
-  border: 1px solid rgba(63, 63, 63, .25);
-  border-radius: 3px;
-  box-shadow: 0 1px 0 rgba(63, 63, 63, .25);
-  color: #333;
-  display: inline-block;
-  font-size: .8em;
-  margin: 0 .1em;
-  padding: .1em .6em;
-  white-space: nowrap
-}
-
-abbr[title] {
-  border-bottom: 1px dotted #777;
-  cursor: help
-}
-
-img {
-  max-width: 100%
-}
-
-.task-list-item {
-  list-style-type: none
-}
-
-.task-list-item-checkbox {
-  margin: 0 .2em 0 -1.3em
-}
-
-.footnote {
-  font-size: .8em;
-  position: relative;
-  top: -.25em;
-  vertical-align: top
-}
-
-.page-break-after {
-  page-break-after: always
-}
-
-.abc-notation-block {
-  overflow-x: auto!important
-}
-
-.stackedit__html {
-  margin-bottom: 180px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 30px;
-  padding-right: 30px;
-  max-width: 750px
-}
-
-.stackedit__toc ul {
-  padding: 0
-}
-
-.stackedit__toc ul a {
-  margin: .5rem 0;
-  padding: .5rem 1rem
-}
-
-.stackedit__toc ul ul {
-  color: #888;
-  font-size: .9em
-}
-
-.stackedit__toc ul ul a {
-  margin: 0;
-  padding: .1rem 1rem
-}
-
-.stackedit__toc li {
-  display: block
-}
-
-.stackedit__toc a {
-  display: block;
-  color: inherit;
-  text-decoration: none
-}
-
-.stackedit__toc a:active, .stackedit__toc a:focus, .stackedit__toc a:hover {
-  background-color: rgba(0, 0, 0, .075);
-  border-radius: 3px
-}
-
-.stackedit__left {
-  position: fixed;
-  display: none;
-  width: 250px;
-  height: 100%;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: none
-}
-
-@media (min-width:1060px) {
-  .stackedit__left {
-    display: block
-  }
-}
-
-.stackedit__right {
-  position: absolute;
-  right: 0;
-  top: 0;
-  left: 0
-}
-
-@media (min-width:1060px) {
-  .stackedit__right {
-    left: 250px
-  }
-}
-
-.stackedit--pdf blockquote {
-  border-left-color: #ececec
-}
-
-.stackedit--pdf .stackedit__html {
-  padding-left: 0;
-  padding-right: 0;
-  max-width: none
-}
-/*#endregion */
-
-/*#region html & body */
-body{
-  color:#333;
-  font:12px verdana,"ヒラギノ丸ゴ ProN W4","Hiragino Maru Gothic ProN","メイリオ","Meiryo","ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
-  line-height:1.5;
-  background:#fff;
-  -webkit-text-size-adjust: none;
-}
-html{background:#b70000;}
-/*#endregion*/
-
-/*#region リンク設定 */
-a{color:#b70000;text-decoration:none;}
-a:hover{color:#1c1c1c;}
-a:active, a:focus{outline:0;}
-/*#endregion*/
-
-/*#region #wrapper .inner */
-#wrapper{
-margin:0 auto;
-padding:0 1%;
-width:98%;
-position:relative;
-}
-.inner{
-  margin:0 auto;
-  width:100%;
-}
-/*#endregion*/
-
-/*#region h1 #header(ヘッダ) */
-h1{
-  font-size:12px;
-  line-height:2.0;
-  font-weight:normal;
-  background:#b70000;
-  color:#fff;
-}
+/* #header, nav#mainNav
+※ #mainNav 固定機能 (with javascript/FixedAnime())
+----------------------------------------------------*/
 #header{
-  overflow:hidden;
-  padding:5px 0 15px;
+	height:110px;
 }
-* html #header{height:1%;}
-/*#endregion*/
-
-/*region 固定機能 (with javascript/FixedAnime()) */
-.fixed {
-  width:100%;/*横幅指定*/
-  position: fixed;/*fixedを設定して固定*/
+#header h1{
+	padding:5px 0 10px 10px;
+	font-size:12px;
+	font-weight:normal;
+}
+nav#mainNav.fixed{
+	width:100%;/*横幅指定*/
+	position: fixed;/*fixedを設定して固定*/
   z-index: 999;/*最前面へ*/
   top:0;/*位置指定*/
   left:0;/*位置指定*/
 }
-/*endregion*/
+nav#mainNav ul li.active a {color:#006699;}
 
-/*#region .log .info .tel (ロゴ) */
-#header .logo{
-  float:left;
-  padding:25px 0 0;
-}
-.logo a{
-  font-size:20px;
-  font-weight:bold;
-  line-height:1;
-  font-family:"Palatino Linotype", "Book Antiqua", Palatino,"ヒラギノ明朝 Pro W3","Hiragino Mincho Pro","ＭＳ Ｐ明朝","MS PMincho",serif;
-}
-.logo span{
-  font-size:12px;
-  font-weight:normal;
-  color:#333;
-}
-.info{
-  float:right;
-  padding:20px 0 0;
-}
-.tel strong{
-  font-size:20px;
-  font-weight:bold;
-}
-/*#endregion*/
 
-/*#region Navigation */
-ul#topnav{
-  overflow:hidden;
-  margin:10px 0;
+/* .logo, .info, .tel Items / アイテム・要素
+----------------------------------------------------*/
+.logo{ /* use in #header */
+	float:left;
+	margin-left:17px;
 }
-* html ul#topnav{height:1%;}
-  ul#topnav li{
-  float:left;
-  text-align:center;
+.logo span{display:block;}
+.info{ /* use in #header */
+	float:right;
+	padding-right:20px;
+	text-align:right;
 }
-ul#topnav a{
-  width:157px;
-  font-size:13px;
-  display:block;
-  padding:20px 0;
-  color:#fff;
-  background:#b70000;
-  border-top:10px solid #fff;
+.info .open{font-size:11px;}
+.logo,.info .tel{
+	margin-top:6px;
+	color:#00a0e9;
+	font-size:20px;
+	font-weight:bold;
 }
-ul#topnav li:first-child a,ul#topnav li:last-child a{width:156px;}
-ul#topnav li.active a,ul#topnav a:hover{
-  border-color:#1c1c1c;
-  background:#1c1c1c;
+.logo span,.info span{
+	color:#333;
+	font-size:.6em;
+	font-weight:normal;
 }
-/*#endregion*/
 
-/*#region メイン画像（トップページ+サブページ） */
+
+/* #wrapper, .inner Container/コンテナ
+----------------------------------------------------*/
+#wrapper{
+	margin:0 auto;
+	padding:0 1%;
+	width:98%;
+	position:relative;
+	background:#fff;
+}
+.inner{
+	margin:0 auto;
+	width:100%;
+}
+
+/* #mainHeader, #mainBanner
+※ #wrapper コンテナ内
+----------------------------------------------------*/
+#mainHeader {
+	margin:17px auto;
+	padding:0;
+	width:100%;	
+}
 #mainBanner{
-  margin:20px auto 20px;
-  padding:4px;
-  position:relative;
-  line-height:0;
-  background:#b70000;
+	margin:17px auto;
+	padding:0;
+	width:100%;
+	position:relative;
+	line-height:0;
 }
 #mainBanner img{
-  max-width:100%;
-  height:auto;
+	max-width:100%;
+	height:auto;
+	border:4px solid #ebebeb;
 }
-.slogan{
-  position:absolute;
-  max-width:100%;
-  height:auto;
-  bottom:10px;
-  left:10px;
-  padding:5px 10px;
-  line-height:1.4;
-  z-index:100;
-  background:url(images/tp2.png);
+.slogan{ /* use in #mainBanner */
+	position:absolute;
+	max-width:100%;
+	height:auto;
+	bottom:10px;
+	left:10px;
+	padding:5px 10px;
+	line-height:1.4;
+	background-color: rgba(0,0,0,0.4);
+	color:#fff;
 }
 .slogan h2{
-  padding-bottom:5px;
-  color:#fff;
-  font-size:20px;
+	padding-bottom:5px;
+	font-size:20px;
+	color:#fff;
 }
-.slogan h3{
-  font-size:14px;
-  color:#ccc;
-}
-/*#endregion*/
 
-/*#region グリッド */
+/* .gridWrapper
+----------------------------------------------------*/
 .gridWrapper{
-  clear:both;
-  padding:20px 0;
-  overflow:hidden;
-}
+	padding-bottom:20px;
+	overflow: hidden;
+}	
 * html .gridWrapper{height:1%;}
+		
+/* .grid, .box in .gridWrapper
+----------------------------------------------------*/
 .grid{
-  float:left;
-}
-.colDark,.colLight{
-  padding-bottom:5px;
-  color:#fff;
-  background:#1c1c1c;
-}
-.colLight{background:#b70000;}
-.colDark h3,.colLight h3{
-  margin:10px 10px 5px;
-  font-size:14px;
-  font-weight:bold;
-}
-.colDark a,.colLight a{
-  display:block;
-  padding:3px;
-  border-radius:3px;
-  color:#fff;
-  background:#b70000;
-}
-.colLight a{background:#1c1c1c;}
-.colLight a:hover,.colDark a:hover{
-  color:#1c1c1c;
-  background:#fff;
-}
-#sub .grid h3{
-  padding-left:7px;
-  font-size:16px;
-  border-left:4px double #1c1c1c;
-}
-.grid p{
-  padding:5px 10px;
-}
-.grid ul{margin:5px 10px;}
-.grid li{
-  padding:5px 0;
-  list-style:inside;
-  border-bottom:1px dashed #ebebeb;
-}
-.gridWrapper img{
-  max-width:100%;
-  height:auto;
-}
-/*#endregion*/
-
-/*#region フッター内のグリッド(3カラム) */
-#footer .grid{
-  color:#fff;
-  background:transparent;
-}
-#footer .col3 ul{margin:0 0 10px 5px;}
-#footer .col3 li{
-  padding:0 6px 0 5px;
-  margin-bottom:3px;
-  list-style:none;
-  border-bottom:0;
-  display:inline-block;
-  border-right:1px solid #fff;
-}
-/*#endregion*/
-
-/*#region section メイン コンテンツ */
-section.content{
-  margin-bottom:20px;
-  font-size:14px;
-  overflow:hidden;
-}
-* html section.content{height:1%;}
-section.content p{margin-bottom:5px;}
-h3.heading{
-  padding:5px 10px;
-  margin-bottom:10px;
-  font-size:16px;
-  color:#fff;
-  background:#b70000;
-  border-radius:3px;
-}
-.alignleft{
-  float:left;
-  clear:left;
-  margin:3px 10px 10px 1px;
-}
-.alignright{
-  float:right;
-  clear:right;
-  margin:3px 1px 10px 10px;
-}
-img.frame,#gallery img{
-  border:4px solid #fff;
-  box-shadow:0 0 2px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow:0 0 2px rgba(0, 0, 0, 0.5);
-}
-#gallery .gridWrapper{padding:0;}
-#gallery img{
-  margin:5px;
-}
-section#gallery{overflow:visible;}
-/*#endregion*/
-
-/*#region テーブル */
-table.table{
-  border-collapse:collapse;
-  width:100%;
-  margin:10px auto;
-}
-table.table th,table.table td{
-  padding:5px;
-  border:1px solid #1c1c1c;
-}
-table.table tr:first-child th,table.table tr:first-child td{
-  border-top:#1c1c1c 4px solid
-}
-table.table th{
-  font-weight:bold;
-  letter-spacing:1px;
-  white-space:nowrap;
-  color:#fff;
-  background:#b70000;
-}
-/*#endregion*/
-
-/*#region フッター */
-#footer{
-  clear:both;
-  padding:20px 0;
-  overflow:hidden;
-  background:#b70000;
-  border-top:1px solid #1c1c1c;
-}
-* html #footer{height:1%;}
-#footer a{color:#fff;}
-#footer a:hover{color:#ccc;}
-#footer .copyright{font-size:11px;}
-/*#endregion*/
-
-/*#region PC用 */
-@media only screen and (min-width:940px) {	
-#wrapper,.inner{
-  width:940px;
-  padding:0;
-}
-#wrapper{padding-bottom:20px;}
-#main{
-	float:right;
-	width:690px;
-}
-#subpage #sub{
 	float:left;
-	width:235px;
+	border-radius:5px;
+	background:#fff;
+}
+.box{
+	margin:0 5px;
+	padding:10px;
+	border:1px solid #ebebeb;
+}
+.box img{
+	max-width:100%;
+	height:auto;
+	border:4px solid #ebebeb;
+}
+.box h3{padding:10px 0 5px;}
+.box h3, .box p{text-align:left;}
+.box p.readmore{
+	padding:10px 5px 5px;
+	text-align:right;
+}
+
+/* 
+	<section>.content <article> Contents, 
+	#gallary,
+	<h3>.heading
+----------------------------------------------------*/
+section.content article{
+	padding:20px;
+	margin-bottom:20px;
+	border:1px solid #ebebeb;
 	overflow:hidden;
 }
-	
-/* グリッド */
-.grid{width:235px;}
-.col2{width:470px;}
-.col3{width:705px;}
-#gallery .grid{width:230px;}
-#subpage #sub .grid{
-	width:100%;
-	float:none;
-	padding-bottom:30px;
-}
-}
-/*#endregion*/
-
-/*#region モニター幅960px以下 */
-@media only screen and (max-width:960px){
-h1 p.inner{padding:0 2%;width:96%}
-#header .logo{padding-left:10px;}
-#header .info{padding-right:10px;}
-	
-ul#topnav{
-	clear:both;
-	width:100%;
-}
-ul#topnav li{
-	width:33%;
-	margin:0 0 5px;
-	border-right:1px solid #1c1c1c;
-	 box-sizing:border-box;
-  -webkit-box-sizing:border-box;
-  -moz-box-sizing:border-box;
-}
-ul#topnav li:nth-child(3n){border-right:0;width:34%;}
-ul#topnav li a{
-	width:100%;
-	border-top:0;
-}
-ul#topnav li:first-child a,ul#topnav li:last-child a{width:100%;}
-.grid{
-	width:50%;
-	margin:2px 0;
-}
-.col2{
-	float:none;
-	width:100%;
-	margin:0 0 20px;
-}
-.grid img{
-	float:left;
-	margin-right:5px;
-}
-#gallery .grid{
-	width:31%;
-	margin:0 1%;
-	padding:0;
-}	
-#gallery .grid img{
-	float:none;
-}	
-section.content{padding:0 10px;}
+* html section.content article{height:1%;}
+section.content p{margin-bottom:5px;}
 section.content img{
-  max-width:90%;
+	max-width:90%;
 	height:auto;
 }
-#sub .grid{padding-bottom:20px;}
-#footer{padding:0;}
-#footer .grid{
-	float:none;
-	width:100%;
-	margin-bottom:5px;
-	text-align:center;
+h3.heading{
+		font-weight:normal;
+		padding:0 10px;
+		line-height:36px;
+		color:#333;
+		background:#f1f1f1;
 }
+.alignleft{
+	float:left;
+	clear:left;
+	margin:3px 10px 10px 0;
 }
-/*#endregion*/
+.alignright{
+	float:right;
+	clear:right;
+	margin:3px 0 10px 10px;
+}
+#gallery .grid img,.border,ul.list img{border:4px solid #ebebeb;}
 
-/*#region iPad 縦 */
-@media only screen and (max-width:768px){
-  #header{padding-bottom:0;}
-	#mainBanner{padding:3px;}
+/* <aside>#sidebar
+----------------------------------------------------*/
+#sidebar ul{padding:10px;}
+#sidebar li{
+	margin-bottom:10px;
+	padding-bottom:10px;
+	list-style:none;
+	border-bottom:1px dashed #ebebeb;
 }
-/*#endregion*/
-
-/*#region スマートフォン 横(ランドスケープ) */
-@media only screen and (max-width:640px){
-.grid{width:100%;}	
-.grid img{
-	float:none;
-	margin:20px auto 10px;
+#sidebar li:last-child{
+	border:0;
+	margin-bottom:0px;
 }
-.grid p{text-align:left;}	
-img.frame,#gallery img{border-width:2px;}
-.alignleft,.alignright{
-	float:none;
+#sidebar li a{
 	display:block;
-	margin:0 auto 10px;
-}	
-#footer .grid p{text-align:center;}
 }
-/*#endregion*/
+#sidebar ul.list li{
+	clear:both;
+	margin-bottom:5px;
+	padding:5px 0;
+	overflow:hidden;
+	border:0;
+}
+#sidebar li.active a {
+	color:#fc3903;
+}
+ul.list li{height:1%;}
+ul.list li img{
+	float:left;
+	margin-right:10px;
+}
+ul.list li{
+	font-size:12px;
+	line-height:1.35;
+}
 
-/*#region スマートフォン 縦(ポートレート) */
+/* <footer>#footer
+----------------------------------------------------*/
+#footer{
+	clear:both;
+	overflow:hidden;
+	padding:10px 10px 20px 10px;
+	background:#f3f3f3;
+}
+* html #footer{height:1%;}
+#footer .grid{
+	padding:10px 0 5px;
+	margin:0;
+	background:transparent;
+}
+#footer #info .logo, #footer #info .info{float:none;}
+#footer #info .info{
+	clear:both;
+	padding:10px 0 0 15px;
+	text-align:left;
+}
+#footer .logo{font-size:18px;}
+#footer .info .tel,#footer .info .tel span,#footer #info .open{
+	font-size:12px;
+	color:#333;
+}
+ul.footnav{
+	float:right;
+	width:650px;
+	padding:10px 0;
+}
+ul.footnav li{
+	float:left;
+	margin-bottom:10px;
+	padding:0 7px 0 8px;
+	font-size:11px;	
+	border-right:1px solid #b6b6b6;
+}
+#footer a{color:#333;}
+#footer a:hover{color:#888;}
+
+
+
+/* Edit 
+	.valid-error,
+	.dialog,
+	※ 情報などダイアログとして表示、<div>.dialog 確保 with JavaScript
+	<form>.upload (file upload)
+	※ read fontawesome before using
+	refer to /sub_finance/data.php, data_upload.php
+----------------------------------------------------*/
+.valid-error {
+	font-size: 0.6rem;
+	color: red;
+}
+form.upload {
+	margin: 50px auto;
+	width: 90%;
+	height: 400px;
+	box-shadow: 0 0 2px #3e3e3e;
+	padding: 30px;
+	text-align: center;	
+}
+.upload-area {
+	margin: auto;
+	width: 85%;
+	height: 300px;
+	position: relative;
+	border: 1px dotted rgba(0, 0, 0, .4);
+}
+.upload-area i { /* need style sheet fontawesome */
+	position: absolute;
+	font-size: 120px;
+	opacity: .1;
+	width: 100%;
+	left: 0;
+	top: 80px;
+}
+.upload-area p {
+	width: 100%;
+	position: absolute;
+	top: 200px;
+	opacity: .8;
+}
+#upload-files {
+	top: 0;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+#upload-submit {
+	font-weight: bold;
+	margin-top: 20px;
+	border-radius: 3px;
+	width: 200px;
+	height: 45px;
+	background-color: rgba(108, 168, 255, .7);
+	border: none;
+	box-shadow: 0 5px 0 rgba(0, 0, 0, 0.6);
+	opacity: .6;
+	cursor: pointer;
+}
+#upload-submit:hover {
+	background-color: rgba(108, 168, 255, 1.0);
+}
+#upload-submit:active {
+	position: relative;
+	top: 5px;
+	box-shadow: none;
+}
+.dialog {
+  overflow: hidden;
+  position: absolute;
+  top: 30%;
+  height: auto;
+  width: 300px;
+  display: none;
+  border:1px solid #aaa;
+  z-index:1000;
+}
+.dialog-header {
+  border: 1px solid #aaa;
+  background: #cccccc;
+  color: #222222;
+  font-weight: bold;
+  overflow: hidden;
+  padding:5px;
+}
+.dialog-title {
+  float: left;
+}
+.dialog-close {
+  float: right;
+  border: 1px solid #d3d3d3;
+  background: #e6e6e6;
+  font-weight: normal;
+  color: #555555;
+}
+.dialog-content {
+  position: relative;
+  border: 0;
+  padding: .5em 1em;
+  background: #fff;
+  overflow: auto;
+  width: auto;
+  height: auto;
+}
+
+/* <table>.common
+----------------------------------------------------*/
+table.common {
+  width:98%;
+  margin-right:1%;
+  margin-left:1%;
+  border-collapse:collapse;
+  margin-top:18px;
+}
+table.common th, 
+table.common td {
+  border: 1px solid #ddd;
+  padding:2px; 
+}
+table.common th,
+table.common th {
+  background: #f4f4f4;
+}
+table.common caption {
+  font-weight:bold;
+  text-align:left;
+  background-color:#F3FFD8;
+  padding:8px;
+}
+table.common a {
+  color: #6495ED;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  cursor: pointer;
+  /*border-bottom:1px dotted #2196F3; */
+}
+table.common a:hover {
+  color: #FF8C00;
+  /*border-bottom:1px dotted #FF8C00;*/
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
+
+/* <table>.scroll-table, <table>.form-table
+----------------------------------------------------*/
+table.scroll-table th,table.scroll-table td,
+table.form-table th,table.form-table td {
+  border-top: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
+	border-right:  1px solid #D4D4D4;
+	padding:8px;
+}
+table.scroll-table,
+table.form-table {
+	width:96%;
+}
+table.form-table th {
+  /*background: #ffecea;*/
+	background-color: #f1f1f1;
+  position: relative;
+  text-align: left;
+	vertical-align: middle;
+  padding-left: 50px;
+	/*
+  width: 300px;
+	*/
+}
+table.table-left-title {width:98%;}
+table.table-left-title thead th {
+	border-right:1px solid #D4D4D4;
+	text-align: center;
+}
+
+/* <table>.table-contaier & Cell (レスポンシブデザイン対応）
+------------------------------------------　*/
+.table-container {
+	display:table;
+	width:100%;
+	border-collapse:separate; 
+	border-spacing:10px 0; /* 横・縦のtable-ceell間空白 */
+	margin:10px auto;
+}
+.table-cell,
+article.table-cell {
+	display:table-cell;
+	width:46%;
+	border:1px solid #ebebeb;
+	padding: 8px;
+}
+
+/* フォーム要素
+	input, select, textarea, button
+----------------------------------------------------*/	
+input[type="submit"],	input[type="text"],	select,	textarea,button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+input[type="text"],textarea {
+  background: #f8f8f8;
+  display: block;
+  font-size: 16px;
+  padding: 10px 8px;
+  width: 98%;
+  transition: 0.8s;
+  border-radius: 0;
+}
+input[type="text"]:focus,textarea:focus {
+  background: #e9f5fb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+input[type="text"].plus {
+  background-color: rgba(182, 241, 159, 0.3);
+  text-align:right;
+}
+input[type="text"].minus {
+  background-color: rgba(255,51,102,0.3);
+  text-align:right;
+} 
+/*textarea[name="content"] { */
+textarea.content {
+  display: inline-block;
+  width: 98%;
+  height: 200px;
+} 
+input::placeholder,textarea::placeholder {
+  color: #ccc;
+}
+
+/* <a>.fusen-btn, <a>.button,
+----------------------------------------------------*/
+a.fusen-btn {
+	display: inline-block;
+	padding: 0.5em 1em;
+	background: #f7f7f7;
+	border-left: solid 6px #ff7c5c;/*左線*/
+	/* set !importan to avoid inherit table.common a define. */
+	color: #ff7c5c !important; /*文字色*/
+	text-decoration-line: none !important;
+	font-weight: bold;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+	cursor: pointer;
+}
+a.fusen-btn:active {
+	box-shadow: inset 0 0 2px rgba(128, 128, 128, 0.1);
+	transform: translateY(2px);
+}
+.button {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 1.0rem;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 0.4rem 1.0rem;   /* 余白       */
+  background    : #ff0000;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+	box-shadow    : 2px 2px 2px #666666;  /* 影の設定 */
+  border        : 2px solid #ff0000;    /* 枠の指定 */
+}
+.button:hover {
+  box-shadow    : none;        /* カーソル時の影消去 */
+  color         : #ff0000;     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
+}
+
+
+/* PC用
+------------------------------------------------------------*/
+@media only screen and (min-width: 960px){
+	#header,#wrapper,.inner{
+	width:960px;
+	padding:0;
+	margin:0 auto;
+	}
+	#wrapper{padding-bottom:20px;}
+  nav#mainNav{
+	clear:both;
+	overflow:hidden;
+	position:relative;
+	background:#f1f1f1;
+	}
+	nav#mainNav .inner{
+	width:932px;
+	padding:0 14px;
+	}
+	nav#mainNav ul li{
+	float: left;
+	position: relative;
+	}
+	nav#mainNav li.last{border-right:1px solid #ebebeb;}
+	nav#mainNav ul li a{
+	display: block;
+	text-align: center;
+	_float:left;
+	font-size:13px;
+	width:154px;
+	height:45px;
+	padding-top:15px;
+	color:#333;
+	background:#f1f1f1;
+	border-left:1px solid #ebebeb;
+	}
+	nav#mainNav ul li a span,nav#mainNav ul li a strong{
+	display:block;
+	}
+	nav#mainNav ul li a span{
+	color:#cdcdcd;
+	font-size:10px;
+	}
+	nav div.panel{
+	display:block !important;
+	float:left;
+	}
+	a#menu{display:none;}
+	nav#mainNav li.active a, 
+	nav#mainNav li a:hover{
+	color:#909090;
+  background:#eee;
+	padding-top:15px;
+	}
+	#mainHeader, #mainBanner {margin-left:15px;}
+	#subpage #mainHeader,	#subpage #mainBanner{margin:15px auto;}
+	#main{
+		float:right;
+		width:667px;
+		padding-right:15px;
+	}
+	#sidebar{
+	float:left;
+	width:245px;
+	padding:15px 0 0 15px;
+	overflow:hidden;
+	}
+	#sidebar article{
+	padding:7px;
+	margin-bottom:20px;
+	border:1px solid #ebebeb;
+	overflow:hidden;
+	}
+	#sidebar ul li a span,nav#mainNav ul li a strong{
+		display:block;
+	}
+	#sidebar ul li a span {padding-left:10px;	}
+	.gridWrapper{
+	width:960px;
+	margin:0 0 0 -10px;
+	}
+	#gallery article{padding:10px 0 10px 10px;}
+	.grid{
+	float:left;
+	width:300px;
+	margin-left:20px;
+	}
+	.column {
+		float:left;
+		width:460px;
+		margin-left:20px;
+	}	
+  #gallery .grid{
+	width:auto;
+	margin:10px 0 2px 10px;
+	}
+}
+
+@media only screen and (max-width:959px){
+	*{
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	nav#mainNav{
+		clear:both;
+		width:100%;
+		margin:0 auto;
+		padding:0;
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(1, #f5f5f5), color-stop(0.5, #f0f0f0), color-stop(0.00, #f7f7f7));
+		background: -webkit-linear-gradient(top, #f7f7f7 0%, #f0f0f0 50%, #f5f5f5 100%);
+		background: -moz-linear-gradient(top, #f7f7f7 0%, #f0f0f0 50%, #f5f5f5 100%);
+		background: -o-linear-gradient(top, #f7f7f7 0%, #f0f0f0 50%, #f5f5f5 100%);
+		background: -ms-linear-gradient(top, #f7f7f7 0%, #f0f0f0 50%, #f5f5f5 100%);
+		background: linear-gradient(top, #f7f7f7 0%, #f0f0f0 50%, #f5f5f5 100%);
+		border:1px solid #e4e4e4;
+	}
+	nav#mainNav a.menu{
+		width:100%;
+		display:block;
+		height:40px;
+		line-height:40px;
+		font-weight: bold;
+		text-align:left;
+	}
+	nav#mainNav a#menu span{padding-left:10px;}
+	nav#mainNav a.menu span:before{content: "→ ";}
+	nav#mainNav a.menuOpen span:before{content: "↓ ";}
+	nav#mainNav a#menu:hover{cursor:pointer;}
+	nav .panel{
+		display: none;
+		width:100%;
+		position: relative;
+		right: 0;
+		top:0;
+		z-index: 1;
+	}
+	nav#mainNav ul li{
+		float: none;
+		clear:both;
+		width:100%;
+		height:auto;
+		line-height:1.2;
+	}
+	nav#mainNav ul li a,nav#mainNav ul li.current-menu-item li a{
+		display: block;
+		padding:15px 10px;
+		text-align:left;
+		border-bottom:1px dashed #ccc;
+	}
+	nav#mainNav ul li a span{padding-left:10px;}
+	nav#mainNav ul li:first-child a{border-top:1px solid #e4e4e4;}
+	nav#mainNav ul li:last-child a{border:0;}
+	nav#mainNav ul li.active a 	{color:#006699;}
+	nav div.panel{float:none;}
+	#subpage #mainHeader,	#subpage #mainBanner {max-width:668px;}
+	#sidebar{padding-bottom:30px;}
+	#sidebar article{padding:7px 0;}
+	#footer .grid,#footer ul.footnav{
+		float:none;
+		width:100%;
+		text-align:center;
+	}
+	ul.footnav li{float:none;display:inline-block;}
+	.grid{
+		width:32%;
+		margin:10px 0 0 1%;
+	}
+	.column {
+		width: 46%;
+		margin:10px 0 0 1%;
+		/*  @media maxwith=959 以上で宣言、Floatしていないので、再度宣言 */
+		float:left;
+	}
+	/* ディール画面のみの対応 フォームの構成要素が崩れるため */
+	#deal-detail,	#deal-info {width:100%;}
+	#gallery .grid{
+		float:left;
+		width:31%;
+		margin:0 0 0 1%;
+	}
+	#footer .grid img, #footer .info{float:none;}
+	#footer .grid p{display:block;}
+	#footer #info .info{float:none;text-align:center;}
+	#footer.logo,#footer .info{
+		width:100%;
+		float:none;
+	}
+}
+
+@media only screen and (max-width:780px) {
+	#position-table,
+	#edit-area {overflow-x: auto;}
+}
+
+/* スマートフォン 横(ランドスケープ) */
+@media only screen and (max-width:640px){
+	#header{
+		height:auto;
+		padding-bottom:20px;
+	}
+	#header h1,.logo,.info{text-align:center;}
+	.logo,.info{
+		clear:both;
+		width:100%;
+		float:none;
+		margin:0;
+	}
+	.box img{
+		float:left;
+		margin-right:5px;
+	}
+	.box h3{padding-top:0;}
+  .alignleft,.alignright{
+		float:none;
+		display:block;
+		margin:0 auto 10px;
+	}
+	#gallery .grid{float:left;}
+	table.common {
+    font-size: 0.8rem;
+  }
+	.scroll-table {
+		width: 630px;
+	}
+	.scroll { /* <div class="scroll"><table></table></div> */
+		overflow-x: auto;
+	}
+}
+
+/* スマートフォン 縦(ポートレート) */
 @media only screen and (max-width:480px){
-#header .logo{padding-top:10px;}
-.info{padding:10px 0 0;}
-ul#topnav li{width:50%;}
-ul#topnav li:nth-child(3n){
-border-right:1px solid #1c1c1c;
-	width:50%;
+	.grid{width:100%;}
+	.column {width:100%;}
+	.box img{max-width:100px;}
+	#mainBanner h2,#mainBanner p,#mainHeader 	{font-size:80%;}
+	table.common {
+    font-size: 0.6rem;
+    overflow: auto;
+  }
+	table.form-table th,
+	table.form-table td {
+  display: block;
+  width: 100%;
+  border-bottom: none;
+	}
+	table.form-table th {
+	text-align:left;
+	}
+	table.table-left-title {width: 90%;}
+	table.table-left-title tr {
+		display: block;
+    float: left;
+	}
+	table.table-left-title tr td, 
+  table.table-left-title tr th {
+    border-left: none;
+    display: block;
+    height: 50px;
+  }
+  table.table-left-title thead {
+    display: block;
+    float: left;
+    width: 30%;
+  }
+  table.table-left-title thead tr {
+    width: 100%;
+  }
+  table.table-left-title tbody {
+    display: block;
+    float: left;
+    width: 70%;
+  }
+  table.table-left-title tbody tr {
+    width: 50%;
+  }
+  table.table-left-title tr td + td {
+    border-left: none;
+  }
+  table.table-left-title tbody td:last-child {
+    	border-bottom: solid 1px #ccc;
+  }
+	.table-cell {
+		display:block;
+		width:96%;
+	}	
 }
-ul#topnav li:nth-child(2n),ul#topnav li:nth-child(6n){border-right:0;}
-#mainBanner{margin-left:1px;}
-#mainBanner h2,#mainBanner h3{font-size:80%;}
-}
-/*#endregion*/
