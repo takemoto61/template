@@ -23,11 +23,7 @@ b-->|id #main 本文|c
 
     [[HOME]](https://github.com/takemoto61)
 
-    user name (Id) : takemoto61
-
-    mail : `takemoto.masaki@gmial.com`
-
-    password : rna77x61
+    
 
     [ホームページ・更新の仕方](https://prog-8.com/docs/github-pages)
 
