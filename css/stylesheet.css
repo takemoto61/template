@@ -1,0 +1,256 @@
+@charset "utf-8";
+
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/earlyaccess/hannari.css);
+@import url(https://fonts.googleapis.com/css?family=Sawarabi+Mincho);
+@import url(https://fonts.googleapis.com/css?family=Sawarabi+Gothic:400,700);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700);
+@import url(https://fonts.googleapis.com/css?family=Baloo+Bhai);
+
+/* reset defined index.html cdn link */
+
+body {
+  font-size:16px;
+}
+
+header, footer, nav, .wrapper {
+  width:98%;
+  margin:0 auto;
+}
+
+nav {
+  clear:both;
+  background:#f1f1f1;
+}
+nav div#menu-list ul {
+  display:flex;
+  flex-direction: row;
+  justify-content:space-around;
+}
+nav div#menu-list ul li a {
+  display: block;
+  text-align: center;
+  float:left;
+  font-size:0.8rem;
+  /*height:45px;*/
+  padding-top:15px;
+  padding-bottom:10px;
+  color:#333;
+  background:#f1f1f1;
+}
+/* Vue 利用するため、選択されているメニュを示します
+nav div#menu-list ul li.active a {color:#006699;}
+*/
+.active-menu { /* Vue でクラスを変更するため */
+  color:red;
+}
+nav a.menu { display:none;}
+
+footer{
+	clear: both;
+	padding: 50px 10px 15px 0;
+	text-align: center;
+	font-size: 1.2rem;
+	font-family: 'Yu Gothic','Yu Gothic Medium','メイリオ','MS ゴシック','游ゴシック Medium',sans-serif;
+	font-weight: bold;
+	color:#423523;
+}
+
+.wrapper {
+  padding:15px;
+}
+
+details {
+  margin:8px 0;
+  border-radius: 5px; 
+  border: 1px solid #ff7f50;;
+}
+details[open] {
+  border-radius: 5px;
+  line-height: 2.0rem;
+}
+details summary {
+  padding:10px 15px;
+  cursor: pointer;
+  background: #ff7f50;
+  font-weight: bold;
+}
+details p {
+  margin:0;
+  padding:25px;
+}
+details div {
+  width:96%;
+  margin:auto;
+}
+
+::-webkit-input-placeholder {
+  color: #ff5555;
+  text-align: left;
+}
+
+
+table.y-scroll { /*table Y-scroll */
+	text-align: left;
+	position: relative;
+	border-collapse: collapse; 
+}
+table.y-scroll th,
+table.y-scroll td{
+	padding: 1rem;
+	border: solid 1px #ddd;
+}
+table.y-scroll th {
+	background: skyblue;
+	position: sticky;
+	top: 0;
+}
+table.y-scroll tbody tr:nth-child(even) {
+  background-color: aliceblue;
+}
+/* table.y-scroll を格納するコンテナ サンプル
+.table-container {
+  overflow-x: auto;
+  overflow-y:auto; 
+  height: 500px;
+}
+*/
+
+input[type="number"] {
+  text-align: right;
+}
+
+/* NAVI 固定機能 (with javascript/FixedAnime())
+*************/
+#main-nav.fixed{
+	width:100%;/*横幅指定*/
+	position: fixed;/*fixedを設定して固定*/
+  z-index: 999;/*最前面へ*/
+  top:0;/*位置指定*/
+  left:0;/*位置指定*/
+}
+
+/* login css
+--------------------------------------------------- */
+#login form {
+  width: 400px;
+  padding: 40px 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #000;
+  text-align: center;  
+}
+
+#login form h1,
+#login form p {
+  color: white;
+  font-weight: 500;
+}
+
+#login form p {
+  font-size: 10px;
+}
+
+#login form input[type = "id"],
+#login form input[type = "password"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  border: 2px solid #ff69b4;
+  padding: 15px 10px;
+  width: 200px;
+  outline: none;
+  border-radius: 24px;
+  transition: 0.25s;
+  text-align: center;
+}
+
+#login form input[type = "id"]:focus,
+#login form input[type = "password"]:focus {
+  width: 280px;
+  background-color: #f0f8ff;
+}
+
+#login form input[type = "button"]{
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  border: 2px solid #f0f8ff;
+  padding: 15px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 25px;
+  transition: 0.25s;
+  text-align: center;
+  cursor: pointer;
+}
+
+#login form input[type = "button"]:hover {
+  background-color: #ff69b4;
+  border: 2px solid #ff69b4;
+}
+
+/*
+
+
+*/
+
+
+@media only screen and (min-width:1280px) {
+  header, footer,nav, .wrapper {
+    width:1280px;
+  }
+}
+
+/*-------------------------------------
+ Reponsive 
+--------------------------------------*/
+@media only screen and (min-width:768px) {
+  nav div#menu-list {
+    display:block !important;
+  }
+  nav div#menu-list ul li a span {
+    display:block;
+    margin:5px auto;
+  }
+}
+
+@media only screen and (max-width:767px) {
+  header, footer, nav, .wrapper {
+    width:100%;
+  }
+  nav {
+    clear:both;
+    margin:0 auto;
+    padding:0;  
+    border:1px solid #e4e4e4;
+  }
+  nav a.menu{
+    width:100%;
+    display:block;
+    height:40px;
+    line-height:40px;
+    font-weight: bold;
+    text-align:left;
+  }
+  nav a.menu span{padding-left:10px;}
+  nav a.menu span:before{content: "→ ";}
+  nav a.menuOpen span:before{content: "↓ ";} 
+  nav a#menu:hover{cursor:pointer;}
+  nav div#menu-list {
+    display: none;
+  }
+  nav div#menu-list ul {
+    flex-direction: column;
+  }
+  nav div#menu-list ul li {border-bottom:1px dashed #ccc}
+  nav div#menu-list ul li a {padding-left:30px;}
+  nav div#menu-list ul li a span{display:inline; padding-left:10px;}
+  nav div#menu-list ul li:first-child {border-top:1px solid #e4e4e4;}
+  nav div#menu-list ul li:last-child {border:0;}
+}
