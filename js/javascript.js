@@ -1,3 +1,11 @@
+/************************************************************** 
+how to import GitHub CSS
+
+https://takemoto61.github.io/template/css/javascript.js
+
+***************************************************************/
+
+
 /* Vue after create menu is NULL, need write in main.js
 const menuId=document.getElementById('menu');
 const menuList = document.getElementById('menu-list');
