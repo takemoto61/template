@@ -6,7 +6,7 @@ https://takemoto61.github.io/template/css/javascript.js
 ***************************************************************/
 
 
-/* Vue after create menu is NULL, need write in main.js
+/* Vue after create menu is NULL, need write in main.js */
 const menuId=document.getElementById('menu');
 const menuList = document.getElementById('menu-list');
 console.log(menuId);
@@ -23,7 +23,7 @@ if (menuId) {
     }
   });
 }
----------------------------------------*/
+
 
 //スクロールすると上部にMenuを固定 する関数
 // use with css class
