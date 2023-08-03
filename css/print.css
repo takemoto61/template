@@ -1,0 +1,69 @@
+@page {
+  margin:0;
+}
+
+header
+,nav
+,footer
+,article
+,div.noPrint
+,div.wrapper {
+  display:none;
+}
+
+/* -----------------------------------------
+A4印刷テンプレート コピーして利用
+-------------------------------------------- */
+.printA4 {
+    /* 印刷デバイスで必要余白領域 5mm (上下・左右) 以上を設ける  */
+    /* A4 縦 */
+    width: 187mm;   /* 210mm-(5mX2)-13mm = 187mm */
+    margin-top:10mm;
+    /* margin-bottom:8mm; 最後に空白ページが表示されるのでheightで指定*/
+    height: 279mm;  /* 294mm-(10mm+8mm) = 279mm */
+    page-break-after:always; /* 各ページの終わりに改ページ */
+    position: relative;
+    counter-increment: print_page_count; /* ページ番号のインクリメント */
+}
+
+/* 両面印刷対応 */
+.printA4:nth-child(odd) {
+  margin-left:13mm;
+}
+.printA4:nth-child(even) {
+  margin-left:8mm;
+}
+.printA4:last-child {
+  page-break-after: auto;  /* 最後のページの改ページを防ぐ */
+}
+.printA4:before {
+  /* header 定義 */
+  position: absolute;
+  left:65mm;
+  top:0mm;
+  content: "仕訳帳<?= "SUNGREEN"; ?>";
+}
+.printA4:after {
+  position: absolute; /* 位置の相対指定 */
+  left: 88mm; /* 右から０ピクセルの位置指定 */
+  bottom: 0; /* 下から０ピクセルの位置指定 */
+  content: counter(print_page_count) "ページ"; /* ページ番号を擬似要素に表示 */
+}
+
+.printA4 table {
+  width:100%;
+  border:solid 1px #000;
+  border-collapse:collapse;
+}
+.printA4 table caption {
+  font-size: 14pt;
+  font-weight:bold;
+  padding-top:1mm;
+  padding-bottom:1mm;
+}
+.printA4 table th,
+.printA4 table td {
+  border: solid 1px #000;
+  height:8mm; /* 27行 table caption 含まない */
+  padding:1mm;
+}
