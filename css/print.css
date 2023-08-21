@@ -73,7 +73,9 @@ A4印刷テンプレート コピーして利用
 }
 .printA4 table th,
 .printA4 table td {
-  /* border: solid 1px #000; */
+  /* 罫線をやめることにより、ページ末までの空行を省略
+  border: solid 1px #000; 
+  */
   height:8mm; /* 27行 table caption 含まない */
   padding:1mm;
 }
@@ -81,7 +83,4 @@ A4印刷テンプレート コピーして利用
 .printA4 table thead {
   border-top: solid 1px #000;
   border-bottom : solid 1px #000;
-}
-.printA4 table tfoot {
-  border-top: solid 1px #000;
 }
