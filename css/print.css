@@ -60,7 +60,7 @@ A4印刷テンプレート コピーして利用
 
 .printA4 table {
   width:100%;
-  border:solid 1px #000;
+  /*border:solid 1px #000; */
   border-collapse:collapse;
 }
 .printA4 table caption {
@@ -76,6 +76,10 @@ A4印刷テンプレート コピーして利用
   padding:1mm;
 }
 
+.printA4 table thead {
+  border-top: solid 1px #000;
+  border-bottom : solid 1px #000;
+}
 .printA4 table tfoot {
   border-top: solid 1px #000;
 }
