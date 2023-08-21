@@ -2,6 +2,14 @@
   margin:0;
 }
 
+/*
+@page :first { margin-right: 4cm; }
+@page :right { margin-right: 4cm; }
+@page :left { margin-left: 4cm; }
+@page :blank { margin-left: 4cm; }
+
+*/
+
 header
 ,nav
 ,footer
@@ -63,7 +71,11 @@ A4印刷テンプレート コピーして利用
 }
 .printA4 table th,
 .printA4 table td {
-  border: solid 1px #000;
+  /* border: solid 1px #000; */
   height:8mm; /* 27行 table caption 含まない */
   padding:1mm;
+}
+
+.printA4 table tfoot {
+  border-top: solid 1px #000;
 }
