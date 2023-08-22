@@ -81,6 +81,6 @@ A4印刷テンプレート コピーして利用
 }
 
 .printA4 table thead {
-  border-top: solid 1px #000;
-  border-bottom : solid 1px #000;
+  border-top: solid 1mm #000;
+  border-bottom : solid 1mm #000;
 }
