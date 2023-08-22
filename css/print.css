@@ -79,11 +79,8 @@ A4印刷テンプレート コピーして利用
   /* 罫線をやめることにより、ページ末までの空行を省略
   border: solid 1px #000; 
   */
-  font-size:12px;
-  /*
-  height:8mm; 
-  27行 table caption 含まない 
-  */
+  font-size:14px;
+  height:8mm; /*27行 table caption 含まない  */
   padding:2mm;
 }
 
