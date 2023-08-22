@@ -73,6 +73,8 @@ A4印刷テンプレート コピーして利用
   font-weight:bold;
   padding-top:1mm;
   padding-bottom:1mm;
+  padding-left:3mm;
+  text-align: left;
 }
 .printA4 table th,
 .printA4 table td {
