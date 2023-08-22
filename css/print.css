@@ -23,7 +23,8 @@ header
 A4印刷テンプレート コピーして利用
 -------------------------------------------- */
 .printA4 {
-  font-family: 'メイリオ',Meiryo,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック',sans-serif;
+  /*font-family: 'メイリオ',Meiryo,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック',sans-serif;*/
+  font-family: 'ＭＳ Ｐゴシック';
   /* 印刷デバイスで必要余白領域 5mm (上下・左右) 以上を設ける  */
   /* A4 縦 */
   width: 187mm;   /* 210mm-(5mX2)-13mm = 187mm */
@@ -76,8 +77,12 @@ A4印刷テンプレート コピーして利用
   /* 罫線をやめることにより、ページ末までの空行を省略
   border: solid 1px #000; 
   */
-  height:8mm; /* 27行 table caption 含まない */
-  padding:1mm;
+  font-size:11px;
+  /*
+  height:8mm; 
+  27行 table caption 含まない 
+  */
+  padding:2mm;
 }
 
 .printA4 table thead {
