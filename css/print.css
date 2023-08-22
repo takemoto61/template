@@ -9,7 +9,7 @@
 @page :blank { margin-left: 4cm; }
 
 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
 
 header
 ,nav
@@ -25,7 +25,7 @@ A4印刷テンプレート コピーして利用
 -------------------------------------------- */
 .printA4 {
   /*font-family: 'メイリオ',Meiryo,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック',sans-serif;*/
-  font-family: 'Noto Serif Japanese';
+  font-family: 'Noto Serif JP';
   font-size:11pt;
   /* 印刷デバイスで必要余白領域 5mm (上下・左右) 以上を設ける  */
   /* A4 縦 */
