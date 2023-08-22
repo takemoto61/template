@@ -69,7 +69,7 @@ A4印刷テンプレート コピーして利用
   border-collapse:collapse;
 }
 .printA4 table caption {
-  font-size: 24pt;
+  font-size: 18pt;
   font-weight:bold;
   padding-top:1mm;
   padding-bottom:1mm;
@@ -79,7 +79,7 @@ A4印刷テンプレート コピーして利用
   /* 罫線をやめることにより、ページ末までの空行を省略
   border: solid 1px #000; 
   */
-  font-size:16pt;
+  font-size:14pt;
   /*
   height:8mm; 
   27行 table caption 含まない 
