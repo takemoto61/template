@@ -81,6 +81,7 @@ A4印刷テンプレート コピーして利用
 
 .printA4 table thead {
   /* 一番細い線は、0.5mmです */
-  border-top: solid 0.5mm #000;
-  border-bottom : solid 0.5mm #000;
+  border: solid 0.5mm #000;
+  border-right: none;
+  border-left: none;
 }
