@@ -61,8 +61,8 @@ A4印刷テンプレート コピーして利用
 .printA4 table {
   width:100%;
   /*border:solid 1px #000; 
-  border-collapse:collapse;
   */
+  border-collapse:collapse;
 }
 .printA4 table caption {
   font-size: 14pt;
