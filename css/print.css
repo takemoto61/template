@@ -32,8 +32,8 @@ A4印刷テンプレート コピーして利用
   width: 187mm;   /* 210mm-(5mX2)-13mm = 187mm */
   margin-top:10mm;
   /* margin-bottom:8mm; 最後に空白ページが表示されるのでheightで指定*/
-  height: 279mm;  /* 294mm-(10mm+8mm) = 279mm */
-  page-break-after:always; /* 各ページの終わりに改ページ */
+  height: 274mm;  /* 294mm-(10mm+10mm) = 274mm */
+  /* page-break-after:always;  各ページの終わりに改ページ */
   position: relative;
   counter-increment: print_page_count; /* ページ番号のインクリメント */
 }
@@ -59,6 +59,7 @@ A4印刷テンプレート コピーして利用
   position: absolute; /* 位置の相対指定 */
   left: 88mm; /* 右から０ピクセルの位置指定 */
   bottom: 0; /* 下から０ピクセルの位置指定 */
+  page-break-after: always;
   content: counter(print_page_count) "ページ"; /* ページ番号を擬似要素に表示 */
 }
 
