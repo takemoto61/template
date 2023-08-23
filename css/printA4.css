@@ -31,9 +31,6 @@ A4印刷テンプレート コピーして利用
   /* 印刷デバイスで必要余白領域 5mm (上下・左右) 以上を設ける  */
   /* A4 縦 */
   width: 187mm;   /* 210mm-(5mX2)-13mm = 187mm */
-  height: 264mm;
-  position: relative;  /* 固定ヘッダーの基準座標を定義 */
-  counter-increment : print_page_count; /* print_page_count; ページ番号のインクリメント */
 }
 
 /* 両面印刷対応 */
@@ -44,26 +41,7 @@ A4印刷テンプレート コピーして利用
   margin-left:8mm;
 }
 
-.printing:last-child {
-  page-break-after: auto;  /* 最後のページの改ページを防ぐ */
-}
-/* header 定義
-.printingA4:before {
-  position: absolute;
-  left:65mm;
-  top:0mm;
-  content: "仕訳帳<?= "SUNGREEN"; ?>";
-}
-*/
-
-.printing:after {
-  position: absolute; /* 位置の相対指定 */
-  left: 88mm; /* 右から０ピクセルの位置指定 */
-  bottom: 0; /* 下から０ピクセルの位置指定 */
-  content: counter(print_page_count) "ページ"; /* ページ番号を擬似要素に表示 */
-}
-
-.printing table thead {
+.printing thead {
   border: solid 0.5mm #000;
   border-right: none;
   border-left: none;
