@@ -3,9 +3,6 @@
 @page {
   margin-top:10mm;
   size: A4 portrait;
-  width:190mm;
-  font-family: 'Noto Serif JP';
-  font-size:11pt;
 }
 
 /*
@@ -22,6 +19,10 @@ A4印刷テンプレート コピーして利用
 -------------------------------------------- */
 .pages{
   break-after: page;
+  width:190mm;
+  width:190mm;
+  font-family: 'Noto Serif JP';
+  font-size:11pt;
 }
 
 .pages table thead {
