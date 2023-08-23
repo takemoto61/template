@@ -12,15 +12,6 @@
 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
 
-header
-,nav
-,footer
-,article
-,div.noPrint
-,div.wrapper {
-  display:none;
-}
-
 /* -----------------------------------------
 A4印刷テンプレート コピーして利用
 -------------------------------------------- */
@@ -30,7 +21,7 @@ A4印刷テンプレート コピーして利用
   font-size:11pt;
   /* 印刷デバイスで必要余白領域 5mm (上下・左右) 以上を設ける  */
   /* A4 縦 */
-  width: 187mm;   /* 210mm-(5mX2)-13mm = 187mm */
+  width: 190mm;
 }
 
 /* 両面印刷対応 */
@@ -41,7 +32,7 @@ A4印刷テンプレート コピーして利用
   margin-left:8mm;
 }
 
-.printing thead {
+table thead {
   border: solid 0.5mm #000;
   border-right: none;
   border-left: none;
