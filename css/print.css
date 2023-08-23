@@ -32,10 +32,10 @@ A4印刷テンプレート コピーして利用
   /* A4 縦 */
   width: 187mm;   /* 210mm-(5mX2)-13mm = 187mm */
   margin-top:10mm;
-  /* margin-bottom:8mm; 最後に空白ページが表示されるのでheightで指定 */
-  height: 270mm;  /* 294mm-(10mm+10mm) = 274mm */
-  page-break-after:always;  /* 各ページの終わりに改ページ */
-  position: relative;  /* 固定ヘッダーの基準座標を定義 */
+  /* margin-bottom:8mm; 最後に空白ページが表示されるのでheightで指定 
+  height: 270mm;  /* 294mm-(10mm+10mm) = 274mm 
+  page-break-after:always;  /* 各ページの終わりに改ページ 
+  position: relative;  /* 固定ヘッダーの基準座標を定義 
   counter-increment: print_page_count; /* ページ番号のインクリメント */
 }
 
