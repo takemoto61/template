@@ -56,15 +56,14 @@ A4印刷テンプレート コピーして利用
   top:0mm;
   content: "仕訳帳<?= "SUNGREEN"; ?>";
 }
-
-.printA4:after {
-  position: absolute; /* 位置の相対指定 
-  left: 88mm; /* 右から０ピクセルの位置指定 
-  bottom: 10mm; /* 下から０ピクセルの位置指定 
-  content: counter(print_page_count) "ページ"; /* ページ番号を擬似要素に表示 
-  page-break-before:always;
-}
 */
+.printA4:after {
+  position: absolute; /* 位置の相対指定 */
+  left: 88mm; /* 右から０ピクセルの位置指定 */
+ /* bottom: 10mm; /* 下から０ピクセルの位置指定 */
+  content: counter(print_page_count) "ページ"; /* ページ番号を擬似要素に表示 */
+}
+
 
 .printA4 table {
   width:100%;
