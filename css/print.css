@@ -42,4 +42,9 @@ A4印刷テンプレート コピーして利用
   margin-left:8mm;
 }
 
+.printA4 table thead {
+  border: solid 0.5mm #000;
+  border-right: none;
+  border-left: none;
+}
 /* original dropbox */
