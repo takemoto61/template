@@ -95,6 +95,7 @@ A4印刷テンプレート コピーして利用
   border: solid 0.5mm #000;
   border-right: none;
   border-left: none;
+  display: table-header-group;
 }
 
 .printA4 div.table {
