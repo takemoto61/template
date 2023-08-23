@@ -98,3 +98,32 @@ A4印刷テンプレート コピーして利用
   border-right: none;
   border-left: none;
 }
+
+.printA4 div.table {
+  width:100%;
+  display:table;
+}
+.printA4 div.caption {
+  display:table-caption;
+  font-size: 18px;
+  font-weight:bold;
+  padding-top:1mm;
+  padding-bottom:1mm;
+  padding-left:3mm;
+  text-align: left;
+  height:10mm;
+}
+.printA4 div.th,
+.printA4 div.td {
+  font-size:14px;
+  /* height:8mm; 27行 table caption 含まない  */
+  padding:2mm;
+  display: table-cell;
+}
+
+.printA4 div.thead {
+  /* 一番細い線は、0.5mmです */
+  border: solid 0.5mm #000;
+  border-right: none;
+  border-left: none;
+}
