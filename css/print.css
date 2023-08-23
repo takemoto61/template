@@ -60,7 +60,6 @@ A4印刷テンプレート コピーして利用
   position: absolute; /* 位置の相対指定 */
   left: 88mm; /* 右から０ピクセルの位置指定 */
   bottom: 0mm; /* 下から０ピクセルの位置指定 */
-  page-break-after: always;
   content: counter(print_page_count) "ページ"; /* ページ番号を擬似要素に表示 */
 }
 
