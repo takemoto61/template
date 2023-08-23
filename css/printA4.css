@@ -5,6 +5,7 @@
   size: A4 portrait;
   width:190mm;
   font-family: 'Noto Serif JP';
+  font-size:11pt;
 }
 
 /*
@@ -22,16 +23,17 @@ A4印刷テンプレート コピーして利用
 .print-page{
   /*font-family: 'メイリオ',Meiryo,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック',sans-serif;*/
   font-family: 'Noto Serif JP';
-  font-size:11pt;
+  
   /* 印刷デバイスで必要余白領域 5mm (上下・左右) 以上を設ける  */
   /* A4 縦 */
   width: 190mm;
 }
 
-.print-page table thead {
+table thead {
   border: solid 0.5mm #000;
   border-right: none;
   border-left: none;
+  font-size: 14pt;
 }
 
 
