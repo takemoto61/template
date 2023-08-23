@@ -48,14 +48,15 @@ A4印刷テンプレート コピーして利用
 .printA4:last-child {
   page-break-after: auto;  /* 最後のページの改ページを防ぐ */
 }
+  /* header 定義 
+
 .printA4:before {
-  /* header 定義 */
   position: absolute;
   left:65mm;
   top:0mm;
   content: "仕訳帳<?= "SUNGREEN"; ?>";
 }
-
+*/
 .printA4:after {
   position: absolute; /* 位置の相対指定 */
   left: 88mm; /* 右から０ピクセルの位置指定 */
@@ -76,6 +77,7 @@ A4印刷テンプレート コピーして利用
   padding-bottom:1mm;
   padding-left:3mm;
   text-align: left;
+  height:10mm;
 }
 .printA4 table th,
 .printA4 table td {
