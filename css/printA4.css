@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
+
 @page {
   margin-top:10mm;
   size: A4 portrait;
+  width:190mm;
+  font-family: 'Noto Serif JP';
 }
 
 /*
@@ -10,7 +14,7 @@
 @page :blank { margin-left: 4cm; }
 
 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
+
 
 /* -----------------------------------------
 A4印刷テンプレート コピーして利用
