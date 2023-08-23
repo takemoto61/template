@@ -20,16 +20,11 @@
 /* -----------------------------------------
 A4印刷テンプレート コピーして利用
 -------------------------------------------- */
-.print-page{
-  /*font-family: 'メイリオ',Meiryo,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック',sans-serif;*/
-  font-family: 'Noto Serif JP';
-  
-  /* 印刷デバイスで必要余白領域 5mm (上下・左右) 以上を設ける  */
-  /* A4 縦 */
-  width: 190mm;
+.pages{
+  break-after: page;
 }
 
-table thead {
+.pages table thead {
   border: solid 0.5mm #000;
   border-right: none;
   border-left: none;
