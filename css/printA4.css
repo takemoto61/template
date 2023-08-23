@@ -24,7 +24,7 @@ header
 /* -----------------------------------------
 A4印刷テンプレート コピーして利用
 -------------------------------------------- */
-.printA4 {
+.print {
   /*font-family: 'メイリオ',Meiryo,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック',sans-serif;*/
   font-family: 'Noto Serif JP';
   font-size:11pt;
@@ -36,14 +36,14 @@ A4印刷テンプレート コピーして利用
 }
 
 /* 両面印刷対応 */
-.printA4:nth-child(odd) {
+.print:nth-child(odd) {
   margin-left:13mm;
 }
-.printA4:nth-child(even) {
+.print:nth-child(even) {
   margin-left:8mm;
 }
 
-.printA4 table thead {
+.print table thead {
   border: solid 0.5mm #000;
   border-right: none;
   border-left: none;
