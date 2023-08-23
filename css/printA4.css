@@ -19,7 +19,7 @@
 /* -----------------------------------------
 A4印刷テンプレート コピーして利用
 -------------------------------------------- */
-.printing {
+.print-page{
   /*font-family: 'メイリオ',Meiryo,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック',sans-serif;*/
   font-family: 'Noto Serif JP';
   font-size:11pt;
@@ -28,17 +28,11 @@ A4印刷テンプレート コピーして利用
   width: 190mm;
 }
 
-/* 両面印刷対応 */
-.printing:nth-child(odd) {
-  margin-left:13mm;
-}
-.printing:nth-child(even) {
-  margin-left:8mm;
-}
-
-table thead {
+.print-page table thead {
   border: solid 0.5mm #000;
   border-right: none;
   border-left: none;
 }
+
+
 /* original dropbox */
