@@ -30,9 +30,8 @@ A4印刷テンプレート コピーして利用
   /* 印刷デバイスで必要余白領域 5mm (上下・左右) 以上を設ける  */
   /* A4 縦 */
   width: 187mm;   /* 210mm-(5mX2)-13mm = 187mm */
-  margin-bottom:8mm; /* 最後に空白ページが表示されるのでheightで指定 */
-  position: relative;  /* 固定ヘッダーの基準座標を定義 */ 
-  counter-increment: print_page_count; /* ページ番号のインクリメント */
+  /* position: relative;  固定ヘッダーの基準座標を定義 */ 
+  /* counter-increment: print_page_count; ページ番号のインクリメント */
 }
 
 /* 両面印刷対応 */
@@ -42,85 +41,5 @@ A4印刷テンプレート コピーして利用
 .printA4:nth-child(even) {
   margin-left:8mm;
 }
-.printA4:last-child {
-  page-break-after: auto;  /* 最後のページの改ページを防ぐ */
-}
-  /* header 定義 
 
-.printA4:before {
-  position: absolute;
-  left:65mm;
-  top:0mm;
-  content: "仕訳帳<?= "SUNGREEN"; ?>";
-}
-*/
-.printA4:after {
-  position: absolute; /* 位置の相対指定 */
-  left: 88mm; /* 右から０ピクセルの位置指定 */
-  bottom: 10mm; /* 下から０ピクセルの位置指定 */
-  content: counter(print_page_count) "ページ"; /* ページ番号を擬似要素に表示 */
-}
-
-
-.printA4 table {
-  width:100%;
-  /*border:solid 1px #000; 
-  */
-  border-collapse:collapse;
-}
-.printA4 table caption {
-  font-size: 18px;
-  font-weight:bold;
-  padding-top:1mm;
-  padding-bottom:1mm;
-  padding-left:3mm;
-  text-align: left;
-  height:10mm;
-}
-.printA4 table th,
-.printA4 table td {
-  /* 罫線をやめることにより、ページ末までの空行を省略
-  border: solid 1px #000; 
-  */
-  font-size:14px;
-  /* height:8mm; 27行 table caption 含まない  */
-  padding:2mm;
-}
-
-.printA4 table thead {
-  /* 一番細い線は、0.5mmです */
-  border: solid 0.5mm #000;
-  border-right: none;
-  border-left: none;
-  display: table-header-group;
-}
-
-.printA4 div.table {
-  width:100%;
-  display:table;
-}
-.printA4 div.caption {
-  display:table-caption;
-  font-size: 18px;
-  font-weight:bold;
-  padding-top:1mm;
-  padding-bottom:1mm;
-  padding-left:3mm;
-  text-align: left;
-  height:10mm;
-}
-.printA4 div.th,
-.printA4 div.td {
-  font-size:14px;
-  /* height:8mm; 27行 table caption 含まない  */
-  padding:2mm;
-  display: table-cell;
-}
-
-.printA4 div.thead {
-  /* 一番細い線は、0.5mmです */
-  border: solid 0.5mm #000;
-  border-right: none;
-  border-left: none;
-  display:table-row;
-}
+/* original dropbox */
