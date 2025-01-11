@@ -1,0 +1,170 @@
+/* 参考サイト
+
+字下げなど（PDFファイルに変換についても記入されています）
+https://qiita.com/reona396/items/8ad9a4ca59f10257e073
+
+おしゃれな見出しの書き方
+https://habataki-blog.com/editor-vscode-markdown-css/
+
+
+*/
+
+h1 {
+  font-family: "游ゴシック体";
+  padding: 0.4em 0.5em;/*文字の上下 左右の余白*/
+  color: #494949;/*文字色*/
+  background: #f4f4f4;/*背景色 */
+}
+
+h1::before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border:none;
+  border-bottom: solid 15px transparent;
+  border-right: solid 20px #eb6100;
+  margin-bottom:15px;
+}
+
+h1:first-letter {
+  font-size: 150%;
+  color: #eb6100;
+}
+
+h2 {
+  position: relative;
+  padding: 0.5em;
+  background: #7db4e6;
+  color: white;
+}
+
+h2::before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 15px transparent;
+  border-right: solid 20px rgb(149, 158, 155);
+}
+
+/*
+h3 {
+  font-family: "游ゴシック体";
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom:#f8f8f8 solid 2px;
+}
+*/
+
+h3 {
+  color: #505050;/*文字色*/
+  padding: 0.5em;/*文字周りの余白*/
+  /*display: inline-block;おまじない*/
+  line-height: 1.3;/*行高*/
+  background: #dbebf8;/*背景色*/
+  vertical-align: middle;
+  border-radius: 25px 0px 0px 25px;/*左側の角を丸く*/  
+}
+
+h3:before {
+  content: '●';
+  color: white;
+  margin-right: 8px;
+}
+
+h4 {
+  position: relative;
+  padding-left: 25px;  
+}
+
+h4:before {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 15px transparent;
+  border-bottom: solid 15px rgb(119, 195, 223);  
+}
+
+h4:after{
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 10px;
+  width: 100%;
+  border-bottom: solid 3px rgb(119, 195, 223);  
+}
+
+
+ol {
+  counter-reset: li;
+  list-style: none;
+}
+
+ol li {
+  padding-left: 1em;
+  text-indent: -1em;
+  margin-bottom: 0.5em;
+}
+
+/* 2重に番号を振られるので、回避
+ol>li::before {
+  content: counter(li) ".";
+  counter-increment: li;
+  font-weight: bold;
+}
+*/
+
+/* markdown-it-container  only 2 words*/
+.warning
+{
+  background-color: orangered;
+  padding:15px;
+  margin:8px 10px;
+}
+.tip {
+  background-color: greenyellow;
+  padding:15px;
+  margin:8px 10px;
+}
+
+.no-jisage p {
+  text-indent: 0rem;
+}
+/* jisage usage ---------------------
+<div class="no-jisage">
+段落を記入
+</div>
+----------------------------------------*/
+p {
+  text-indent: 1rem;
+}
+
+code {
+  margin: 0 2px;
+  padding: 1px 5px;
+  white-space: nowrap;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+  color: #4271ae !important;
+  border: 1px solid #cccccc;
+}
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+  /*color: #000 !important; */
+  color:greenyellow !important;
+}
+
+blockquote p {
+  text-indent: 0em;
+}
