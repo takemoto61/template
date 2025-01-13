@@ -141,6 +141,10 @@ ol>li::before {
 段落を記入
 </div>
 ----------------------------------------*/
+.marmaid p {
+  text-indent: 0rem;
+}
+
 p {
   text-indent: 1rem;
 }
